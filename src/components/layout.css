@@ -19,6 +19,7 @@ a {
   height: 920px;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .HeroGroup {
@@ -54,6 +55,18 @@ a {
   padding: 9px 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
+  transition: 0.5s;
+}
+
+.Hero a:hover {
+  background: white;
+  color: black;
+}
+
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 @media (max-width: 640px) {
@@ -68,6 +81,10 @@ a {
   .Hero p {
     font-size: 24px;
   }
+
+  .Hero .Logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @keyframes HeroAnimation {
@@ -79,4 +96,12 @@ a {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+.Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  margin: 100px 0px;
+  justify-items: center;
 }
