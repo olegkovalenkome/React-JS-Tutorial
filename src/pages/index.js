@@ -9,15 +9,15 @@ import styled from "styled-components"
 
 import Layout from '../components/layout'
 
-const SectionCaption = styled.p`
-font-weight: 600;
-text-transform: uppercase;
-font-size: 18px;
-color: rgb(129, 139, 180);
-text-align: center;
+const SectionCaption = styled.p `
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgb(129, 139, 180);
+  text-align: center;
 `
 
-const SectionCellGroup = styled.div`
+const SectionCellGroup = styled.div `
   max-width: 600px;
   margin: 0 auto 100px;
   display: grid;
@@ -30,7 +30,8 @@ const SectionCellGroup = styled.div`
   }
 `
 
-const IndexPage = () => (<Layout>
+const IndexPage = () => (
+<Layout>
   <div className="Hero">
     <div className="HeroGroup">
       <h1>Learn to<br/>design and code React apps</h1>
@@ -59,12 +60,10 @@ const IndexPage = () => (<Layout>
     </div>
   </div>
   <Section image={require('../images/wallpaper2.jpg')} logo={require('../images/logo-react.png')} title="React for Designers" text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."/>
-
-<SectionCaption>12 sections – 6 hours</SectionCaption>
+  <SectionCaption>12 sections – 6 hours</SectionCaption>
   <SectionCellGroup>
     {staticdata.cells.map(cell => (<Cell title={cell.title} image={cell.image}/>))}
   </SectionCellGroup>
-
-    </Layout>)
+</Layout>)
 
 export default IndexPage

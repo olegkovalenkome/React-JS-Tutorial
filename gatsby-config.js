@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Design+Code',
+    description: 'React JS for designers',
+    keywords: 'react, gatsby, babel, html, css',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -17,5 +19,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: 'f1v5jf59d5dh',
+        accessToken: '31cbf073ec065a42982ce146e8ae430a57ceae756e224bc725871e9e74e27ad2',
+      }
+    }
   ],
 }
